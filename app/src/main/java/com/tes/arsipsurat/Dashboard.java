@@ -23,6 +23,8 @@ public class Dashboard extends AppCompatActivity {
         CardView cardview = findViewById(R.id.disposisi);
         CardView skeluar = findViewById(R.id.skeluar);
         CardView smasuk = findViewById(R.id.smasuk);
+        CardView arsiplist = findViewById(R.id.arsiplist);
+//        activity for dashboard data
 
         skeluar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,14 @@ public class Dashboard extends AppCompatActivity {
                 Intent intent = new Intent(Dashboard.this,SuratMasuk.class);
 
             }
+        });
+
+        arsiplist.setOnClickListener(new View.OnClickListener(){
+              @Override
+            public void onClick(View v){
+                  Intent intent = new Intent(Dashboard.this,arsipActivity.class);
+                  System.out.println(intent+"layout");
+              }
         });
 
     }
